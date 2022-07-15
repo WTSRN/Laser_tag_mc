@@ -1,2 +1,2 @@
-# Laser Tag in Minecraft
+# Minecraft laser tag
 Laser tag in minecraft 
