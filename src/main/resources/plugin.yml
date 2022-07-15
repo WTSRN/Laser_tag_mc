@@ -1,0 +1,8 @@
+name: Minecraft_laser_tag
+version: '${project.version}'
+main: org.wtsrn.plugins.lasertag.minecraft_laser_tag.Main
+api-version: 1.19
+prefix: LTG
+authors: [ Well_thatssad, RegularNormals ]
+description: Laser tag in minecraft
+website: https://github.com/WTSRN/Laser_tag_mc
