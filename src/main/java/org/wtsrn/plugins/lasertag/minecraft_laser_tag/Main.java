@@ -1,12 +1,13 @@
 package org.wtsrn.plugins.lasertag.minecraft_laser_tag;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.wtsrn.plugins.lasertag.minecraft_laser_tag.commands.TestCommand;
 
 public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        this.getCommand("test").setExecutor(new TestCommand());
 
     }
 

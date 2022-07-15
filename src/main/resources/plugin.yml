@@ -6,3 +6,6 @@ prefix: LTG
 authors: [ Well_thatssad, RegularNormals ]
 description: Laser tag in minecraft
 website: https://github.com/WTSRN/Laser_tag_mc
+commands:
+  test:
+
