@@ -10,29 +10,29 @@ public class PlayerHandler {
 
 
 
-    static Map<LasertagPlayer, Integer> currPlayers = new HashMap<>();
+    static Map<Player, Integer> currPlayers = new HashMap<>();
 
-    public static void damage(LasertagPlayer key){
+    public static void damage(Player key){
         currPlayers.replace(key, getHealth(key) - 1);
     }
 
-    public static int getHealth(LasertagPlayer p) {
+    public static int getHealth(Player p) {
         return currPlayers.get(p);
     }
 
-    public static boolean hasPlayer(LasertagPlayer p) {
+    public static boolean hasPlayer(Player p) {
         return currPlayers.containsKey(p);
     }
 
-    public static void addPlayer(LasertagPlayer p, Integer health) {
+    public static void addPlayer(Player p, Integer health) {
         currPlayers.put(p, health);
     }
 
-    public static Set<LasertagPlayer> getCurrentPlayers() {
+    public static Set<Player> getCurrentPlayers() {
         return currPlayers.keySet();
     }
 
-    public static void removePlayer(LasertagPlayer p){
+    public static void removePlayer(Player p){
         currPlayers.remove(p);
     }
 
