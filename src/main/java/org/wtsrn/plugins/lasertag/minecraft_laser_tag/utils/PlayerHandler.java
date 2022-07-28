@@ -7,29 +7,32 @@ import java.util.Map;
 import java.util.Set;
 
 public class PlayerHandler {
-    Map<LasertagPlayer, Integer> currPlayers = new HashMap<>();
 
-    public PlayerHandler() {
 
+
+    static Map<LasertagPlayer, Integer> currPlayers = new HashMap<>();
+
+    public static void damage(LasertagPlayer key){
+        currPlayers.replace(key, getHealth(key) - 1);
     }
 
-    public int getHealth(LasertagPlayer p) {
+    public static int getHealth(LasertagPlayer p) {
         return currPlayers.get(p);
     }
 
-    public boolean hasPlayer(LasertagPlayer p) {
+    public static boolean hasPlayer(LasertagPlayer p) {
         return currPlayers.containsKey(p);
     }
 
-    public void addPlayer(LasertagPlayer p, Integer health) {
+    public static void addPlayer(LasertagPlayer p, Integer health) {
         currPlayers.put(p, health);
     }
 
-    public Set<LasertagPlayer> getCurrentPlayers() {
+    public static Set<LasertagPlayer> getCurrentPlayers() {
         return currPlayers.keySet();
     }
 
-    public void removePlayer(LasertagPlayer p){
+    public static void removePlayer(LasertagPlayer p){
         currPlayers.remove(p);
     }
 

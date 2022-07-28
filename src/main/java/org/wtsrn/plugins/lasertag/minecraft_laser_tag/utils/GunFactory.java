@@ -9,9 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GunFactory {
+
     public List<String> lore = new ArrayList<>();
     public GunFactory(Player p){
         this.lore.add("Gun of " + p.getName());
+
     }
 
     public ItemStack createGun(){
