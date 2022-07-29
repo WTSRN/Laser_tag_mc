@@ -20,6 +20,9 @@ public class TestCommand implements CommandExecutor {
 
                 ItemStack air = new ItemStack(Material.AIR);
                 ItemStack tempItem = p.getInventory().getItem(i);
+                if(tempItem == null){
+                    continue;
+                }
                 if (tempItem.hasItemMeta() && tempItem.getType().equals(Material.GOLDEN_HOE) && tempItem.getItemMeta().getLocalizedName().equals("laser_gun")) {
                     p.getInventory().setItem(i, air);
                 }

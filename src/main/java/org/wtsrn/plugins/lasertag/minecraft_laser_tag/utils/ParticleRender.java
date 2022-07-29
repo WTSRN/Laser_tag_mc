@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 
 public class ParticleRender {
     //author: Player_Schark on Spigot
-    public void spawnParticleAlongLine(Location start, Location end, Particle particle, int pointsPerLine, int particleCount, double offsetX, double offsetY, double offsetZ, double extra, @Nullable Double data, boolean forceDisplay,
+    public void spawnParticleAlongLine(Location start, Location end, Particle particle, int pointsPerLine, int particleCount, double offsetX, double offsetY, double offsetZ, double extra, @Nullable Particle.DustOptions data, boolean forceDisplay,
                                        @Nullable Predicate<Location> operationPerPoint) {
         double d = start.distance(end) / pointsPerLine;
         for (int i = 0; i < pointsPerLine; i++) {
